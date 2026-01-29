@@ -1,7 +1,8 @@
 import { useCounterStore } from "./counter.store";
 
 export default function CounterPage() {
-  const { count, decrement, increment, reset } = useCounterStore();
+  const { count, decrement, increment, reset, incrementByTwo, multiplySelf } =
+    useCounterStore();
   return (
     <div>
       <div>count : {count}</div>
@@ -10,8 +11,8 @@ export default function CounterPage() {
       <div onClick={reset}>reset</div>
 
       {/* // lab */}
-      <div>incrementByTwo</div>
-      <div>multiplySelf</div>
+      <div onClick={incrementByTwo}>incrementByTwo</div>
+      <div onClick={multiplySelf}>multiplySelf</div>
     </div>
   );
 }
